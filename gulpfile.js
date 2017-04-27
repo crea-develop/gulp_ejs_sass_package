@@ -17,6 +17,7 @@ var concat      = require('gulp-concat');
 var rename      = require('gulp-rename');
 var plumber     = require('gulp-plumber');
 var fs          = require('graceful-fs');
+var del         = require('del');
 
 
 
@@ -110,6 +111,12 @@ gulp.task('watch', function() {
 // 一括処理タスク
 // ====================
 gulp.task('default', ['ejs', 'sass', 'js', 'image']);
+
+// distの中身を全削除
+// ※※※　distの中だけに動画ファイルとかおいていると全部消えるのでお気をつけください　※※※
+gulp.task('clean', function () {
+    return del([paths.dist + '**/*']);
+});
 
 
 // =======================================================
