@@ -44,7 +44,8 @@ var paths = {
             pc  : 'dist/assets/js/',
             sp  : 'dist/sp/assets/js/'
         }
-    }
+    },
+    other : 'src/**/*.!(jpg|gif|png|php|html|scss|css|js)'
 };
 
 var common_js_sort_pc = [
@@ -100,17 +101,25 @@ gulp.task('sass', ['sass_pc', 'sass_sp']);
 // ====================
 gulp.task('js', ['main_js', 'common_js', 'main_js_sp', 'common_js_sp']);
 
+// HTML, CSS, JS, 画像以外のファイルをdistにコピーする
+gulp.task('copy', function () {
+    gulp
+    .src(paths.other)
+    .pipe(gulp.dest(paths.dist));
+});
+
 // 監視タスク
 // ====================
 gulp.task('watch', function() {
     gulp.watch(paths.ejs, ['ejs']);
     gulp.watch(paths.sass.src, ['sass']);
     gulp.watch(paths.js.src,   ['js']);
+    gulp.watch(paths.other, ['copy']);
 });
 
 // 一括処理タスク
 // ====================
-gulp.task('default', ['ejs', 'sass', 'js', 'image']);
+gulp.task('default', ['ejs', 'sass', 'js', 'image', 'copy']);
 
 // distの中身を全削除
 // ※※※　distの中だけに動画ファイルとかおいていると全部消えるのでお気をつけください　※※※
