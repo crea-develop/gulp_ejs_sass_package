@@ -46,7 +46,7 @@ var paths = {
             sp  : 'dist/sp/assets/js/'
         }
     },
-    other : 'src/**/*.!(jpg|gif|png|php|html|scss|css|*.scss|*.css|js|*.js)',
+    other : 'src/**/*.!(jpg|gif|png|php|html|scss|css|*.scss|*.css|js|*.js|ejs)',
     release     : {
         dist    : 'release',
         html    : 'dist/**/*.+(html|php)',
