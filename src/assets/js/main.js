@@ -1,6 +1,8 @@
-(function(window, $, undefined){
+(function(window, undefined){
+    const namespace = 'Ns';
 
-    $(function () {
+    if (window[namespace] === undefined) {
+        window[namespace] = {};
+    }
 
-    });
-})(this, jQuery);
+})(this);

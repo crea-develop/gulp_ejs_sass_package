@@ -1,1 +1,2 @@
-!function(n,u,c){u(function(){})}(0,jQuery);
+"use strict";jQuery(function(){});
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNwL2Fzc2V0cy9qcy9tYWluLmpzIl0sIm5hbWVzIjpbImpRdWVyeSJdLCJtYXBwaW5ncyI6ImFBQUFBLE9BQUMiLCJmaWxlIjoic3AvYXNzZXRzL2pzL21haW4uanMiLCJzb3VyY2VzQ29udGVudCI6WyIoZnVuY3Rpb24od2luZG93LCAkLCB1bmRlZmluZWQpe1xuXG4gICAgJChmdW5jdGlvbiAoKSB7XG5cbiAgICB9KTtcbn0pKHRoaXMsIGpRdWVyeSk7Il19
