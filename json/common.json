@@ -5,7 +5,7 @@
     "page_title"  : "ページタイトルデフォルト | サイト名",
     "keywords"    : "キーワード,keyword",
     "description" : "サイトの説明デフォルト",
-    "site_url"    : "https://createch.jp/",
+    "site_url"    : "https://testsample.hoge/",
     "og"          : {
         "image" : "https://testsample.hoge/ogp.png"
     },
