@@ -7,7 +7,7 @@
     "description" : "サイトの説明デフォルト",
     "site_url"    : "https://createch.jp/",
     "og"          : {
-        "image" : "ogp.png"
+        "image" : "https://testsample.hoge/ogp.png"
     },
     "twitter" : {
         "site" : "@",

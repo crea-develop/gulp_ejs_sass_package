@@ -2,9 +2,9 @@
     "index" : {
         "path"        : "./",
         "pagetype"    : "Index",
-        "url"         : false,
+        "url"         : "",
         "title"       : "サイト名",
-        "description" : "false",
+        "description" : false,
         "og" : {
             "type" : "website",
             "image" : false

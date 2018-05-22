@@ -14,7 +14,6 @@ const cssmin       = require('gulp-cssmin');
 
 const uglify     = require('gulp-uglify-es').default;
 const babel      = require('gulp-babel');
-const sourcemaps = require('gulp-sourcemaps');
 
 const imagemin     = require('gulp-imagemin');
 
@@ -143,12 +142,10 @@ gulp.task('release:js:default', function () {
     gulp.src(paths.js.src)
     .pipe(plumber())
     .pipe(changed(paths.pc.release))
-    .pipe(sourcemaps.init())
     .pipe(babel({
         presets: ['env']
     }))
     .pipe(uglify({output: {comments: "/^!/"}}))
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.pc.release));
 });
 gulp.task('release:js:common:pc', function () {
@@ -156,12 +153,10 @@ gulp.task('release:js:common:pc', function () {
     .pipe(plumber())
     .pipe(changed(paths.pc.js.release))
     .pipe(concat('common.js'))
-    .pipe(sourcemaps.init())
     // .pipe(babel({
     //     presets: ['env']
     // }))
     .pipe(uglify({output: {comments: "/^!/"}}))
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.pc.js.release));
 });
 gulp.task('release:js:common:sp', function () {
@@ -169,12 +164,10 @@ gulp.task('release:js:common:sp', function () {
     .pipe(plumber())
     .pipe(changed(paths.sp.js.release))
     .pipe(concat('common.js'))
-    .pipe(sourcemaps.init())
     // .pipe(babel({
     //     presets: ['env']
     // }))
     .pipe(uglify({output: {comments: "/^!/"}}))
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.sp.js.release));
 });
 
